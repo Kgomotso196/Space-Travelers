@@ -1,10 +1,14 @@
 import React from 'react';
-import { Routes, Route } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 const NavBar = () => {
   return (
     <nav>
-      <h1>Space Travelers Hub</h1>
+      <ul>
+        <li className = 'nav-item'><NavLink to="/" activeClassName="active"><p>Rockets</p></NavLink></li>
+        <li className = 'nav-item'><NavLink to="/missions" activeClassName="active"><p>Missions</p></NavLink></li>
+        <li className = 'nav-item'><NavLink to="/profile" activeClassName="active"><p>My Profile</p></NavLink></li>
+      </ul>
     </nav>
   )
 }
