@@ -13,7 +13,7 @@ function App() {
           <Route path="/" element={<Profile />} />
           <Route path="/missions" element={<Profile />} />
           <Route path="/profile" element={<Profile />} />
-       </Routes>
+        </Routes>
       </main>
     </>
   );
