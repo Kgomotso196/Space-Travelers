@@ -7,14 +7,14 @@ import Profile from './components/Profile';
 function App() {
   return (
     <>
-     <NavBar />
-     <main>
-        <Routes>
+      <NavBar />
+      <main>
+       <Routes>
           <Route path="/" element={<Profile />} />
           <Route path="/missions" element={<Profile />} />
           <Route path="/profile" element={<Profile />} />
         </Routes>
-      </main>
+     </main>
     </>
   );
 }
