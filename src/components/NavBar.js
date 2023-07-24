@@ -2,7 +2,9 @@ import React from 'react';
 
 const NavBar = () => {
   return (
-    <nav></nav>
+    <nav>
+      <h1>Space Travelers Hub</h1>
+    </nav>
   )
 }
 
