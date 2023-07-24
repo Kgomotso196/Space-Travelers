@@ -9,12 +9,12 @@ function App() {
     <>
       <NavBar />
       <main>
-       <Routes>
+        <Routes>
           <Route path="/" element={<Profile />} />
           <Route path="/missions" element={<Profile />} />
           <Route path="/profile" element={<Profile />} />
-        </Routes>
-     </main>
+       </Routes>
+      </main>
     </>
   );
 }
