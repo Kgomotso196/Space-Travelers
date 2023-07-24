@@ -1,0 +1,25 @@
+table {
+  border-collapse: collapse;
+  width: 80%;
+  padding: auto;
+  border: 1px solid #ddd;
+  font-size: 18px;
+  font-family: 'Roboto', sans-serif;
+  color: #333;
+  background-color: #fff;
+  border-radius: 5px;
+}
+
+#description {
+  width: 50%;
+}
+
+tr > * {
+  padding: 10px;
+  border: 1px solid #ddd;
+  text-align: center;
+}
+
+tbody > *:nth-child(odd) > * {
+  background-color: #f2f2f2;
+}
