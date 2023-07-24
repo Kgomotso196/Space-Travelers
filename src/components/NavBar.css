@@ -1,0 +1,17 @@
+ul {
+  list-style: none;
+}
+
+.nav-item > * {
+  width: max-content;
+  text-decoration: none;
+  color: #000;
+}
+
+.nav-item *:hover {
+  text-decoration: underline;
+}
+
+.active {
+  text-decoration: underline;
+}
