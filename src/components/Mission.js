@@ -19,7 +19,7 @@ const Mission = ({mission_id, mission_name, description, joined}) => {
     <tr>
       <td>{mission_name}</td>
       <td>{description}</td>
-      <td><p className={joined ? 'member':''}>{joined ? 'Active Member':'NOT A MEMBER'}</p></td>
+      <td><p className={joined ? 'status member':'status'}>{joined ? 'Active Member':'NOT A MEMBER'}</p></td>
       <td>
         <button
         type="button"

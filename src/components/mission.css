@@ -15,14 +15,14 @@ body {
 
 table {
   border-collapse: collapse;
-  width: 80%;
+  width: 85%;
   border: 1px solid #ddd;
   font-size: 18px;
   font-family: 'Roboto', sans-serif;
   color: var(--text);
   background-color: var(--background);
   border-radius: 5px;
-  margin: 2% 0 0 10%;
+  margin: 2% 0 0 7.5%;
 }
 
 #description {
@@ -69,6 +69,10 @@ p {
   background-color: #8f8f8f;
   padding-inline: 10px;
   font-weight: bold;
+}
+
+.status {
+  width: 98%;
 }
 
 .member {
