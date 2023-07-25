@@ -1,7 +1,7 @@
 import React from 'react';
 import { Provider } from 'react-redux';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import './App.css';
+// import './App.css';
 import NavBar from './components/NavBar';
 import Profile from './components/Profile';
 import MissionList from './components/MissionList';
