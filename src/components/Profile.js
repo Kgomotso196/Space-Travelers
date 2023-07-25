@@ -17,7 +17,6 @@ const Profile = () => {
   let rocket;
   let mission;
 
-
   if (filteredMissions.length === 0) {
     mission = (
       <div className='list'>
@@ -42,20 +41,20 @@ const Profile = () => {
 
   if (filteredRockets.length === 0) {
     rocket = (
-      <div className='list'>
+      <div className='rockets'>
         <h2>My Rockets</h2>
-        <ul id="missions">
+        <ul id="rockets">
           <li>You have not reserved any rockets yet</li>
         </ul>
       </div>
     );
   } else {
     rocket = (
-      <div className='list'>
+      <div className='rockets'>
         <h2>My Rockets</h2>
         <ul id="rockets">
           {filteredRockets.map((rocket) => (
-            <li key={rocket.id}>{rocket.rocket_name}</li>
+            <li key={rocket.id}>{rocket.name}</li>
           ))}
         </ul>
       </div>
