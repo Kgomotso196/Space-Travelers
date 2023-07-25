@@ -26,6 +26,7 @@ const Mission = ({mission_id, mission_name, description, joined}) => {
         onClick={(e) => {
           handleClick(e, { id: mission_id, joined: joined });
         }}
+        className={joined ? 'joined':''}
         >
           {joined ? 'Leave Mission':'Join Mission'}
         </button>

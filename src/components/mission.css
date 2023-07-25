@@ -1,11 +1,26 @@
+:root {
+  --background: #050505;
+  --text: #fafafa;
+  --primary: #1e324d;
+  --secondary: #0e1825;
+  --accent: #91add4;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--text);
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+}
+
 table {
   border-collapse: collapse;
   width: 80%;
   border: 1px solid #ddd;
   font-size: 18px;
   font-family: 'Roboto', sans-serif;
-  color: #333;
-  background-color: #fff;
+  color: var(--text);
+  background-color: var(--background);
   border-radius: 5px;
 }
 
@@ -15,10 +30,31 @@ table {
 
 tr > * {
   padding: 10px;
-  border: 1px solid #ddd;
+  border: 1px solid var(--secondary);
   text-align: center;
 }
 
 tbody > *:nth-child(odd) > * {
-  background-color: #f2f2f2;
+  background-color: var(--primary);
+}
+
+button {
+  background-color: transparent;
+  color: var(--text);
+  border: 2px solid var(--secondary);
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 18px;
+  font-family: 'Roboto', sans-serif;
+  cursor: pointer;
+}
+
+.joined {
+  background-color: transparent;
+  color: rgb(186, 31, 31);
+  border: 2px solid rgb(186, 31, 31);
+}
+
+.joined:hover {
+  background-color: rgba(186, 31, 31, 0.3);
 }

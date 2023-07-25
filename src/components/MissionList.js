@@ -15,7 +15,6 @@ const MissionList = () => {
 
   return (
     <div>
-      <h1>Missions</h1>
       <table>
         <thead>
           <tr>
