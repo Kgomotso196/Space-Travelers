@@ -1,5 +1,12 @@
-#profile {
-  margin: 1% 0 0 7.5%;
+#profile-container {
+  display: flex;
+  width: 90%;
+  padding: 1% 0 0 5%;
+}
+
+.list {
+  width: 35%;
+  margin: 1% 0 0 5%;
 }
 
 #missions {
@@ -8,7 +15,7 @@
   flex-direction: column;
   margin: 0;
   padding: 0;
-  width: 35%;
+  width: 100%;
 }
 
 #missions li {
@@ -20,7 +27,7 @@
   align-items: center;
 }
 
-#missions li:nth-child(odd) {
+#missions li:nth-child(even) {
   background-color: var(--primary);
 }
 

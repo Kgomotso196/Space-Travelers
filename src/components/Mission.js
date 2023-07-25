@@ -17,7 +17,7 @@ const Mission = ({mission_id, mission_name, description, joined}) => {
 
   return (
     <tr>
-      <td>{mission_name}</td>
+      <td><b>{mission_name}</b></td>
       <td>{description}</td>
       <td><p className={joined ? 'status member':'status'}>{joined ? 'Active Member':'NOT A MEMBER'}</p></td>
       <td>
