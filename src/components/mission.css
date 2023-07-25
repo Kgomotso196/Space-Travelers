@@ -1,8 +1,8 @@
 :root {
-  --background: #050505;
-  --text: #fafafa;
-  --primary: #1e324d;
-  --secondary: #0e1825;
+  --background: #fff;
+  --text: #000;
+  --primary: #e0e0e0;
+  --secondary: #91add4;
   --accent: #91add4;
 }
 
@@ -22,6 +22,7 @@ table {
   color: var(--text);
   background-color: var(--background);
   border-radius: 5px;
+  margin: 2% 0 0 10%;
 }
 
 #description {
@@ -34,6 +35,10 @@ tr > * {
   text-align: center;
 }
 
+tr > *:nth-child(3) {
+  padding: 1.5%;
+}
+
 tbody > *:nth-child(odd) > * {
   background-color: var(--primary);
 }
@@ -41,7 +46,7 @@ tbody > *:nth-child(odd) > * {
 button {
   background-color: transparent;
   color: var(--text);
-  border: 2px solid var(--secondary);
+  border: 2px solid #8f8f8f;
   border-radius: 5px;
   padding: 10px;
   font-size: 18px;
@@ -57,4 +62,16 @@ button {
 
 .joined:hover {
   background-color: rgba(186, 31, 31, 0.3);
+}
+
+p {
+  color: #fff;
+  background-color: #8f8f8f;
+  padding-inline: 10px;
+  font-weight: bold;
+}
+
+.member {
+  background-color: rgb(133, 194, 255);
+  width: max-content;
 }

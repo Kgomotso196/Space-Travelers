@@ -7,8 +7,11 @@
 }
 
 nav {
-  padding: 2%;
+  width: 90%;
+  margin-left: 5%;
+  padding: 2% 0 0 2%;
   display: flex;
+  border-bottom: 1px solid var(--accent);
 }
 
 ul {

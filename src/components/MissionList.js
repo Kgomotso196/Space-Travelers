@@ -20,7 +20,7 @@ const MissionList = () => {
           <tr>
             <th>Mission</th>
             <th id="description">Description</th>
-            <th>Status</th>
+            <th id="status">Status</th>
             <th></th>
           </tr>
         </thead>
