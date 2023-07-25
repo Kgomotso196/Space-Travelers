@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import Mission from './Mission';
 import { fetchMissions } from '../redux/missions/missionsSlice';
-import './mission.css'
+import './mission.css';
 
 const MissionList = () => {
   const dispatch = useDispatch();
@@ -11,7 +11,7 @@ const MissionList = () => {
   useEffect(() => {
     if (missions.length > 0) return;
     dispatch(fetchMissions());
-  }, [dispatch]);
+  }, [dispatch, missions.length]);
 
   return (
     <div>
