@@ -12,8 +12,6 @@ const MissionList = () => {
     dispatch(fetchMissions());
   }, []);
 
-  console.log(missions);
-
   return (
     <div>
       <h1>Missions</h1>
