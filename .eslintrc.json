@@ -4,11 +4,6 @@
     "es6": true,
     "jest": true
   },
-  "settings": {
-    "react": {
-      "version": "^18.2.0"
-    }
-  },
   "parser": "@babel/eslint-parser",
   "parserOptions": {
     "ecmaFeatures": {
