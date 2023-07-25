@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { reserveRocket } from '../redux/rockets/rocketsSlice';
-import RocketList from './RocketList';
+import { fetchRockets, reserveRocket } from '../redux/rockets/rocketsSlice';
+import RocketList from '../components/RocketList';
 
 function Rockets() {
   const dispatch = useDispatch();
@@ -9,7 +9,7 @@ function Rockets() {
 
   useEffect(() => {
     if (rockets.length === 0) {
-      dispatch({ type: 'rockets/fetchRockets/pending' });
+      dispatch(fetchRockets());
     }
   }, [dispatch, rockets]);
 

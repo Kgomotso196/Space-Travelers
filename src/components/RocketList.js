@@ -5,24 +5,19 @@ function RocketList({
   id, name, description, flickrImages, onClick, reserved,
 }) {
   return (
-    <>
-      <h1>Rockets</h1>
-      <div className="container mt-3">
-        <div className="row">
-          <div className="col-3"><img src={flickrImages} className="img-thumbnail" alt="rocketThumb" /></div>
-          <div className="col-9">
-            <h4>{name}</h4>
-            <p>
-              {reserved ? <span className="bg-success text-white rounded px-1">Reserved</span> : ''}
-              {description}
-            </p>
-            {onClick
-              ? <button type="button" className={reserved ? 'btn btn-white border border-dark' : 'btn btn-primary'} id={id} onClick={(e) => onClick(e)}>{reserved ? 'Cancel Reservation' : 'Reserve Rocket'}</button>
-              : ''}
-          </div>
+    <div className="container mt-3">
+      <div className="row">
+        <div className="col-3"><img src={flickrImages} className="img-thumbnail" alt="rocketThumb" /></div>
+        <div className="col-9">
+          <h4>{name}</h4>
+          <p>
+            {reserved ? <span className="bg-success text-white rounded px-1">Reserved</span> : ''}
+            {description}
+          </p>
+          <button type="button" className={reserved ? 'btn btn-white border border-dark' : 'btn btn-primary'} id={id} onClick={(e) => onClick(e)}>{reserved ? 'Cancel Reservation' : 'Reserve Rocket'}</button>
         </div>
+      </div>
     </div>
-    </>
   );
 }
 

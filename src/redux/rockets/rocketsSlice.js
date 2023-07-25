@@ -1,9 +1,23 @@
-import { createSlice } from '@reduxjs/toolkit';
+import { createSlice, createAsyncThunk, isRejectedWithValue } from '@reduxjs/toolkit';
+import axios from 'axios';
+
+const url = 'https://api.spacexdata.com/v4/rockets';
 
 const initialState = {
   rockets: [],
-  reservedRockets: [],
+  status: 'idle',
+  loading: false,
+  error: null,
 };
+
+export const fetchRockets = createAsyncThunk('rockets/fetchRockets', async () => {
+  try {
+    const response = await axios.get(url);
+    return response.data;
+  } catch (error) {
+    return isRejectedWithValue(error.response.data);
+  }
+});
 
 const rocketsSlice = createSlice({
   name: 'rockets',
@@ -16,10 +30,28 @@ const rocketsSlice = createSlice({
         rocket.reserved = !rocket.reserved;
       }
     },
-    bookedRockets(state) {
-      const booked = state.rockets.filter((rocket) => rocket.reserved === true);
-      state.reservedRockets = [...booked];
-    },
+  },
+  extraReducers: (builder) => {
+    builder
+      .addCase(fetchRockets.pending, (state) => {
+        state.status = 'loading';
+        state.loading = true;
+      })
+      .addCase(fetchRockets.fulfilled, (state, action) => {
+        state.status = 'succeeded';
+        state.rockets = action.payload.map((rocket) => ({
+          id: rocket.id,
+          name: rocket.name,
+          description: rocket.description,
+          image: rocket.flickr_images[0],
+          reserved: false,
+        }));
+        state.loading = false;
+      })
+      .addCase(fetchRockets.rejected, (state, action) => {
+        state.status = 'failed';
+        state.error = action.error.message;
+      });
   },
 });
 
