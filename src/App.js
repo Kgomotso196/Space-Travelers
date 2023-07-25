@@ -5,7 +5,7 @@ import './App.css';
 import NavBar from './components/NavBar';
 import Profile from './components/Profile';
 import MissionList from './components/MissionList';
-import Rockets from './components/Rockets';
+import RocketList from './components/RocketList';
 import store from './redux/store';
 
 function App() {
@@ -16,7 +16,7 @@ function App() {
           <NavBar />
           <main>
             <Routes>
-              <Route path="/rockets" element={<Rockets />} />
+              <Route path="/rockets" element={<RocketList />} />
               <Route path="/" element={<Profile />} />
               <Route path="/missions" element={<MissionList />} />
               <Route path="/profile" element={<Profile />} />
