@@ -17,6 +17,20 @@ const missionsSlice = createSlice({
     error: null,
   },
   reducers: {},
+  extraReducers: (builder) => {
+    builder
+      .addCase(fetchMissions.pending, (state) => {
+        state.loading = true;
+      })
+      .addCase(fetchMissions.fulfilled, (state, action) => {
+        state.missions = action.payload;
+        state.loading = false;
+      })
+      .addCase(fetchMissions.rejected, (state, action) => {
+        state.error = action.error.message;
+        state.loading = false;
+      });
+  }
 });
 
 export default missionsSlice.reducer;
