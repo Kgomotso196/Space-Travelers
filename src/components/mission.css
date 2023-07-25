@@ -52,6 +52,7 @@ button {
   font-size: 18px;
   font-family: 'Roboto', sans-serif;
   cursor: pointer;
+  width: 150px;
 }
 
 .joined {
@@ -72,7 +73,8 @@ p {
 }
 
 .status {
-  width: 98%;
+  width: 160px;
+  margin-top: 10%;
 }
 
 .member {
