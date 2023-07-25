@@ -10,7 +10,7 @@ const MissionList = () => {
 
   useEffect(() => {
     dispatch(fetchMissions());
-  }, []);
+  }, [dispatch]);
 
   return (
     <div>
