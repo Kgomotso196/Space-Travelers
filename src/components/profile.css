@@ -1,0 +1,73 @@
+#profile-container {
+  display: flex;
+  gap: 80px;
+  margin: 20px auto;
+  width: 90%;
+  padding: 1% 0 0 5%;
+}
+
+.list {
+  width: 35%;
+  margin: 1% 0 0 5%;
+}
+
+.rockets {
+  width: 35%;
+  margin: 1% 0 0 5%;
+}
+
+#missions {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  margin: 20px auto;
+  padding: 0;
+  width: 100%;
+}
+
+#rockets {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  margin: 20px auto;
+  padding: 0;
+  width: 100%;
+}
+
+#missions li {
+  margin-top: -1px;
+  border: 1px solid #8f8f8f;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#rockets li {
+  margin-top: -1px;
+  border: 1px solid #8f8f8f;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#missions li:nth-child(even) {
+  background-color: var(--primary);
+}
+
+#rockets li:nth-child(even) {
+  background-color: var(--primary);
+}
+
+#missions li button {
+  width: 100px;
+  height: 30px;
+  padding: 0;
+  border: 1px solid rgb(186, 31, 31);
+  color: rgb(186, 31, 31);
+}
+
+#missions li button:hover {
+  background-color: rgba(186, 31, 31, 0.3);
+}

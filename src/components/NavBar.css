@@ -1,11 +1,39 @@
+:root {
+  --background: #050505;
+  --text: #fafafa;
+  --primary: #1e324d;
+  --secondary: #0e1825;
+  --accent: #91add4;
+}
+
+nav {
+  width: 90%;
+  margin-left: 5%;
+  padding: 2% 0 0 2%;
+  display: flex;
+  border-bottom: 1px solid var(--accent);
+}
+
 ul {
   list-style: none;
+  display: flex;
+  width: 50%;
+}
+
+.nav-item {
+  height: min-content;
+  margin: 1.5% 2%;
 }
 
 .nav-item > * {
   width: max-content;
   text-decoration: none;
-  color: #000;
+  color: var(--text);
+}
+
+.nav-item:last-child {
+  padding-left: 3%;
+  border-left: 1px solid var(--accent);
 }
 
 .nav-item *:hover {

@@ -2,13 +2,28 @@ import { createSlice, createAsyncThunk, isRejectedWithValue } from '@reduxjs/too
 import axios from 'axios';
 
 const url = 'https://api.spacexdata.com/v4/rockets';
+const LOCAL_STORAGE_KEY = 'reservedRockets';
 
 const initialState = {
   rockets: [],
   status: 'idle',
   loading: false,
   error: null,
+  reservedRockets: [],
 };
+
+export const loadReservedRockets = createAsyncThunk('rockets/loadReservedRockets', async () => {
+  try {
+    const reservedRockets = localStorage.getItem(LOCAL_STORAGE_KEY);
+    if (reservedRockets) {
+      return JSON.parse(reservedRockets);
+    }
+    return [];
+  } catch (error) {
+    console.error('Error loading reserved rockets from local storage:', error);
+    return [];
+  }
+});
 
 export const fetchRockets = createAsyncThunk('rockets/fetchRockets', async () => {
   try {
@@ -28,7 +43,17 @@ const rocketsSlice = createSlice({
       const rocket = state.rockets.find((rocket) => rocket.id === rocketId);
       if (rocket) {
         rocket.reserved = !rocket.reserved;
+        if (rocket.reserved) {
+          state.reservedRockets.push(rocket);
+        } else {
+          state.reservedRockets = state.reservedRockets.filter((r) => r.id !== rocketId);
+        }
+        localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(state.reservedRockets));
       }
+    },
+    bookedRockets(state) {
+      const booked = state.rockets.filter((rocket) => rocket.reserved === true);
+      state.reservedRockets = [...booked];
     },
   },
   extraReducers: (builder) => {

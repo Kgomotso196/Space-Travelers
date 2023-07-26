@@ -1,12 +1,28 @@
+:root {
+  --background: #fff;
+  --text: #000;
+  --primary: #e0e0e0;
+  --secondary: #91add4;
+  --accent: #91add4;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--text);
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+}
+
 table {
   border-collapse: collapse;
-  width: 80%;
+  width: 85%;
   border: 1px solid #ddd;
   font-size: 18px;
   font-family: 'Roboto', sans-serif;
-  color: #333;
-  background-color: #fff;
+  color: var(--text);
+  background-color: var(--background);
   border-radius: 5px;
+  margin: 2% 0 0 7.5%;
 }
 
 #description {
@@ -15,10 +31,53 @@ table {
 
 tr > * {
   padding: 10px;
-  border: 1px solid #ddd;
+  border: 1px solid var(--secondary);
   text-align: center;
 }
 
+tr > *:nth-child(3) {
+  padding: 1.5%;
+}
+
 tbody > *:nth-child(odd) > * {
-  background-color: #f2f2f2;
+  background-color: var(--primary);
+}
+
+button {
+  background-color: transparent;
+  color: var(--text);
+  border: 2px solid #8f8f8f;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 18px;
+  font-family: 'Roboto', sans-serif;
+  cursor: pointer;
+  width: 150px;
+}
+
+.joined {
+  background-color: transparent;
+  color: rgb(186, 31, 31);
+  border: 2px solid rgb(186, 31, 31);
+}
+
+.joined:hover {
+  background-color: rgba(186, 31, 31, 0.3);
+}
+
+p {
+  color: #fff;
+  background-color: #8f8f8f;
+  padding-inline: 10px;
+  font-weight: bold;
+}
+
+.status {
+  width: 160px;
+  margin-top: 10%;
+}
+
+.member {
+  background-color: rgb(133, 194, 255);
+  width: max-content;
 }

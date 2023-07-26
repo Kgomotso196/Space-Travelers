@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { fetchRockets, reserveRocket } from '../redux/rockets/rocketsSlice';
-import RocketList from '../components/RocketList';
+import { fetchRockets, reserveRocket, loadReservedRockets } from '../redux/rockets/rocketsSlice';
+import RocketList from './RocketList';
 
 function Rockets() {
   const dispatch = useDispatch();
@@ -11,6 +11,7 @@ function Rockets() {
     if (rockets.length === 0) {
       dispatch(fetchRockets());
     }
+    dispatch(loadReservedRockets());
   }, [dispatch, rockets]);
 
   const clickHandler = (e) => {
