@@ -1,0 +1,56 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Profile Component renders Profile component correctly 1`] = `
+<DocumentFragment>
+  <div
+    id="profile-container"
+  >
+    <div
+      class="list"
+    >
+      <h2>
+        My Missions
+      </h2>
+      <ul
+        id="missions"
+      >
+        <li>
+          Mission 1
+          <button>
+            Leave
+          </button>
+        </li>
+        <li>
+          Mission 2
+          <button>
+            Leave
+          </button>
+        </li>
+      </ul>
+    </div>
+    <div
+      class="list"
+    >
+      <h2>
+        My Rockets
+      </h2>
+      <ul
+        id="rockets"
+      >
+        <li>
+          Rocket 1
+          <button>
+            Cancel
+          </button>
+        </li>
+        <li>
+          Rocket 2
+          <button>
+            Cancel
+          </button>
+        </li>
+      </ul>
+    </div>
+  </div>
+</DocumentFragment>
+`;

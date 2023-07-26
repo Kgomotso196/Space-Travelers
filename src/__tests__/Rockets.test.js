@@ -30,7 +30,7 @@ describe('Rockets Component', () => {
             reserved: true,
           },
         ],
-        loading: 'idle',
+        loading: false,
       },
     });
   });
