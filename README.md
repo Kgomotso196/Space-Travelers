@@ -10,7 +10,6 @@
   - [🛠 Built With](#built-with)
     - [Tech Stack](#tech-stack)
     - [Key Features](#key-features)
-  - [🚀 Live Demo](#live-demo)
 - [💻 Getting Started](#getting-started)
   - [Prerequisites](#prerequisites)
   - [Setup](#setup)
@@ -60,12 +59,6 @@
 - **Implementing Redux for state management is a key feature of this project.**
 - **Asynchronous Data Fetching with Redux Thunk**
 - **Persistent Data with Local Storage**
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-## 🚀 Live Demo <a name="live-demo"></a>
-
-- [Live Demo Link](https://bookstore-troos.onrender.com/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
