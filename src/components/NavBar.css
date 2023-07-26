@@ -36,7 +36,6 @@ nav h1 {
 }
 
 nav ul {
-  margin-right: 50%;
   list-style: none;
   display: flex;
   justify-content: flex-end;
