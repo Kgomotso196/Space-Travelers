@@ -1,0 +1,118 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Component testing Mission list should render correctly 1`] = `
+<DocumentFragment>
+  <div>
+    <table>
+      <thead>
+        <tr>
+          <th>
+            Mission
+          </th>
+          <th
+            id="description"
+          >
+            Description
+          </th>
+          <th
+            id="status"
+          >
+            Status
+          </th>
+          <th />
+        </tr>
+      </thead>
+      <tbody />
+    </table>
+    ;
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Component testing NavBar should render correctly 1`] = `
+<DocumentFragment>
+  <nav>
+    <img
+      alt="planet logo"
+      src="planet.png"
+    />
+    <h1>
+      Space Travelers' Hub
+    </h1>
+    <ul>
+      <li
+        class="nav-item"
+      >
+        <a
+          activeclassname="active"
+          class=""
+          href="/rockets"
+        >
+          Rockets
+        </a>
+      </li>
+      <li
+        class="nav-item"
+      >
+        <a
+          activeclassname="active"
+          class=""
+          href="/missions"
+        >
+          Missions
+        </a>
+      </li>
+      <li
+        class="nav-item"
+      >
+        <a
+          activeclassname="active"
+          class=""
+          href="/profile"
+        >
+          My Profile
+        </a>
+      </li>
+    </ul>
+  </nav>
+</DocumentFragment>
+`;
+
+exports[`Component testing Profile should render correctly 1`] = `
+<DocumentFragment>
+  <div
+    id="profile-container"
+  >
+    <div
+      class="list"
+    >
+      <h2>
+        My Missions
+      </h2>
+      <ul
+        id="missions"
+      >
+        <li>
+          You have not joined any missions yet
+        </li>
+      </ul>
+    </div>
+    <div
+      class="list"
+    >
+      <h2>
+        My Rockets
+      </h2>
+      <ul
+        id="rockets"
+      >
+        <li>
+          You have not reserved any rockets yet
+        </li>
+      </ul>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Component testing Rocket list should render correctly 1`] = `<DocumentFragment />`;
