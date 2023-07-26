@@ -1,5 +1,4 @@
 import { createSlice, createAsyncThunk, isRejectedWithValue } from '@reduxjs/toolkit';
-import axios from 'axios';
 
 const url = 'https://api.spacexdata.com/v4/rockets';
 const LOCAL_STORAGE_KEY = 'reservedRockets';
@@ -27,8 +26,13 @@ export const loadReservedRockets = createAsyncThunk('rockets/loadReservedRockets
 
 export const fetchRockets = createAsyncThunk('rockets/fetchRockets', async () => {
   try {
-    const response = await axios.get(url);
-    return response.data;
+    const response = await fetch(url);
+    if (!response.ok) {
+      throw new Error('Server error');
+    } else {
+      const rockets = await response.json();
+      return rockets;
+    }
   } catch (error) {
     return isRejectedWithValue(error.response.data);
   }
