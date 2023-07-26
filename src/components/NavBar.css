@@ -9,14 +9,29 @@
 nav {
   width: 90%;
   margin-left: 5%;
+  margin-bottom: 2%;
   padding: 2% 0 0 2%;
   display: flex;
   border-bottom: 1px solid var(--accent);
 }
 
-ul {
+nav img {
+  width: 80px;
+  height: 80px;
+  margin-top: -1%;
+  margin-right: 2%;
+  margin-bottom: 1%;
+}
+
+nav h1 {
+  width: 1000px;
+}
+
+nav ul {
+  margin-left: 50%;
   list-style: none;
   display: flex;
+  justify-content: flex-end;
   width: 50%;
 }
 

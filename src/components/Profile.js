@@ -62,7 +62,7 @@ const Profile = () => {
         <h2>My Rockets</h2>
         <ul id="rockets">
           {filteredRockets.map((rocket) => (
-            <li key={rocket.id}>{rocket.name}<button onClick={(e) => { handleRocketClick(e, { id: rocket.id }); }}>Leave</button></li>
+            <li key={rocket.id}>{rocket.name}<button onClick={(e) => { handleRocketClick(e, { id: rocket.id }); }}>Cancel</button></li>
           ))}
         </ul>
       </div>
