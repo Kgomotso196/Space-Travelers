@@ -15,7 +15,7 @@ function RocketList({
             {description}
           </p>
           {onClick
-            ? <button type="button" className={reserved ? 'btn btn-white border border-dark' : 'btn btn-primary'} id={id} onClick={(e) => onClick(e)}>{reserved ? 'Cancel Reservation' : 'Reserve Rocket'}</button>
+            ? <button type="button" className={reserved ? 'btn btn-white border border-dark' : 'btn btn-primary'} id={id} onClick={(e) => onClick(e)} style={{ width: '180px' }} >{reserved ? 'Cancel Reservation' : 'Reserve Rocket'}</button>
             : ''}
         </div>
       </div>

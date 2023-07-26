@@ -8,16 +8,39 @@
 
 nav {
   width: 90%;
-  margin-left: 5%;
-  padding: 2% 0 0 2%;
+  margin: 2% auto;
+  margin-top: auto;
+  margin-bottom: auto;
+  padding: 2% 0;
+  justify-content: space-between;
+  align-items: center;
   display: flex;
   border-bottom: 1px solid var(--accent);
 }
 
-ul {
+nav img {
+  width: 85px;
+  height: 80px;
+  margin-top: -1%;
+  margin-right: 2%;
+  margin-left: 5%;
+  margin-bottom: 1%;
+}
+
+nav h1 {
+  width: 1500px;
+  max-width: 1500px;
+  white-space: nowrap;
+  overflow: hidden;
+  margin-left: 2px;
+}
+
+nav ul {
   list-style: none;
   display: flex;
-  width: 50%;
+  justify-content: flex-end;
+  width: 1500px;
+  margin-right: 20px;
 }
 
 .nav-item {
