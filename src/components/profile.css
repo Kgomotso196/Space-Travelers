@@ -60,7 +60,7 @@
   background-color: var(--primary);
 }
 
-#missions li button {
+.list button {
   width: 100px;
   height: 30px;
   padding: 0;
@@ -68,6 +68,6 @@
   color: rgb(186, 31, 31);
 }
 
-#missions li button:hover {
+.list button:hover {
   background-color: rgba(186, 31, 31, 0.3);
 }

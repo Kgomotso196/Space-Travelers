@@ -2,6 +2,7 @@ import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import './profile.css'
 import { leaveMission } from '../redux/missions/missionsSlice';
+import { reserveRocket } from '../redux/rockets/rocketsSlice';
 
 const Profile = () => {
   const missions = useSelector((state) => state.missions.missions);
@@ -14,6 +15,13 @@ const Profile = () => {
     e.preventDefault();
     dispatch(leaveMission({ id }));
   };
+
+  const handleRocketClick = (e, { id }) => {
+    e.preventDefault();
+    console.log(id);
+    dispatch(reserveRocket(id));
+  };
+
   let rocket;
   let mission;
 
@@ -41,7 +49,7 @@ const Profile = () => {
 
   if (filteredRockets.length === 0) {
     rocket = (
-      <div className='rockets'>
+      <div className='list'>
         <h2>My Rockets</h2>
         <ul id="rockets">
           <li>You have not reserved any rockets yet</li>
@@ -50,11 +58,11 @@ const Profile = () => {
     );
   } else {
     rocket = (
-      <div className='rockets'>
+      <div className='list'>
         <h2>My Rockets</h2>
         <ul id="rockets">
           {filteredRockets.map((rocket) => (
-            <li key={rocket.id}>{rocket.name}</li>
+            <li key={rocket.id}>{rocket.name}<button onClick={(e) => { handleRocketClick(e, { id: rocket.id }); }}>Leave</button></li>
           ))}
         </ul>
       </div>
@@ -64,7 +72,6 @@ const Profile = () => {
   return (
     <>
       <div id="profile-container">{mission}{rocket}</div>
-
     </>
   );
 
